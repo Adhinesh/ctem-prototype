@@ -15,25 +15,6 @@ PURPOSE:
     - Removed assets
     - Field-level modifications in assets
 
-WORKING:
-    1. Fetches previous asset state from Supabase "assets" table
-    2. Receives current scan data as input
-    3. Uses AssetChangeDetector to compare both datasets
-    4. Generates a change report containing:
-        - added assets
-        - removed assets
-        - modified assets (field-level differences)
-
-    5. Stores results into "asset_changes" table:
-        - asset_added → for new assets
-        - asset_removed → for missing assets
-        - asset_modified → for changed fields
-
-    6. Adds scan_id and timestamp to avoid duplicate tracking issues
-
-OUTPUT:
-    - Persistent audit trail of all asset changes in Supabase
-    - Historical tracking of asset evolution across scans
 """
 from datetime import datetime
 from supabase import create_client

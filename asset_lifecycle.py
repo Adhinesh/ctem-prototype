@@ -12,20 +12,7 @@ PURPOSE:
     It ensures:
     - first_seen is set when an asset is discovered for the first time
     - last_seen is updated every time the asset is observed in a scan
-    - new assets are safely inserted into Supabase without duplication
-
-WORKING:
-    1. Fetches existing assets from Supabase database
-    2. Iterates over scanned assets from the latest scan
-    3. For each asset:
-        - If asset exists → updates last_seen timestamp
-        - If asset is new → sets first_seen + last_seen and inserts into DB
-    4. Uses UPSERT to prevent duplicate asset entries
-    5. Ensures only valid assets (with required fields) are stored
-
-OUTPUT:
-    - Updates asset lifecycle fields in "assets" table
-    - Inserts new assets when discovered
+    - new assets are  into Supabase 
 """
 from datetime import datetime
 from supabase import create_client
