@@ -6,5 +6,5 @@
 # config.py is ignored by git to keep your keys safe.
 # ============================================================
 
-SUPABASE_URL = "https://your-project-id.supabase.co"
-SUPABASE_KEY = "your-anon-public-key-here"
+SUPABASE_URL = "https://eqlolqdgviakidyinwrt.supabase.co"  
+SUPABASE_KEY = "sb_publishable_bvXFa9QnkBIC7ZYNbY_bUw_VN5shl4z"    
