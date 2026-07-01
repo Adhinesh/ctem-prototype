@@ -107,3 +107,11 @@ current = [
 detector = AssetChangeDetector(previous, current)
 print(detector.generate_report())
 ```
+
+
+### Rename the config example.py to config.py
+```python
+
+SUPABASE_URL = "https://eqlolqdgviakidyinwrt.supabase.co"  
+SUPABASE_KEY = "" # for the KEY, kindly contact the team 2        
+```
